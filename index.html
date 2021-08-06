@@ -1,0 +1,508 @@
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+      <html>
+      <head>
+        
+        <title>DONT MESS UP</title>
+        <style type="text/css">
+        h1 {
+          text-align: center;
+          font-family: Sans-Serif;
+          font-weight: bold;
+          font-size: 36px;
+          margin: 20px 0 0 0;
+          padding: 0;
+        }
+      
+      
+        .question1{
+          text-align: center;
+        }
+      
+        .question2{
+          text-align: center;
+        }
+      
+        .question3{
+          text-align: center;
+        }
+      
+        #level1sub{
+          display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+        }
+      
+        .question1a{
+          text-align: center;
+        }
+      
+        .question2a{
+          text-align: center;
+        }
+      
+        .question3a{
+          text-align: center;
+        }
+      
+        #level2sub{
+          display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+        }
+      
+        .question1b{
+          text-align: center;
+        }
+      
+        .question2b{
+          text-align: center;
+        }
+      
+        .question3b{
+          text-align: center;
+        }
+      
+        #level3sub{
+          display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+        
+        }
+      
+        #level1{
+          display: none;
+        }
+        
+        #level2{
+          display: none;
+        }
+      
+        #level3{
+          display: none;
+        }
+
+        #shocko3{
+          display: hidden;
+        }
+
+        h1{
+          color: yellow;
+  
+        }
+        
+        p{
+          color: yellow;
+          background-color: black;
+          border-radius: 3px;
+          font-size: 25px;
+        }
+
+        #timerl1{
+          color: yellow;
+          background-color: black;
+          border-radius: 3px;
+          font-size: 25px;
+        }
+
+        #timerl2{
+          display: none;
+          color: yellow;
+          background-color: black;
+          border-radius: 3px;
+          font-size: 25px;
+        }
+
+        #timerl3{
+          display: none;
+          color: yellow;
+          background-color: black;
+          border-radius: 3px;
+          font-size: 25px;
+        }
+        </style>
+
+      </head>
+      
+      <body background="shockie.jpg">
+        
+        <h1>ZAP ZAP ZAP</h1>
+
+        <p id = "timerl1"> Your Shock will begin in <span id="countdowntimer">15 </span> Seconds</p>
+
+        <button id="l1B"  onclick="BeginL1()">Play level 1</button>
+        <button id="l2B"  onclick="BeginL2()">Play level 2</button>  
+        <button id="l3B"  onclick="BeginL3()">Play level 3</button>
+      
+      <div id="level1">
+
+
+        <form form  id = "F3" action="https:api.particle.io/v1/devices/E00FCE688BB270717EBEEAD6/shock3?access_token=f2f1a45fdad1abe312594d11813a3a11201ac6da" method="POST"> 
+
+            <input type="hidden" name = "shocko3" id ="shocko3" value="0" ></input>
+
+      <div class="question1">
+      <p name = "q1"> 5 + 5 = 
+      <input id="answer1" class="subl1" type="text">
+      </p>
+        </div>
+    </form>    
+
+        <br>
+ 
+        <div class="question2">
+          <p name = "q2"> -3 + 15 = 
+          <input id="answer2" class="subl1" type="text">
+          </p>
+      </div>
+      </form>
+      <br>
+      
+          <div class="question3">
+            <p name = "q3"> 7 + 22 = 
+            <input id="answer3" type="text" class="subl1">
+            </p>
+            </div>
+            <br>
+            <button id="level1sub" value ="Click" onclick="submitForms1()"> Submit</button>
+        </div>
+    </form>
+            
+    <script>
+
+submitForms1 = function(){
+
+var butt = document.getElementById("answer1").value;
+
+var butt2 = document.getElementById("answer2").value;
+
+var butt3 = document.getElementById("answer3").value;
+
+
+ if(butt == "10" && butt2 == "12" && butt3 == "29"){
+const element = document.getElementById("shocko3");
+element.value = "1";
+ }else{
+  const element1 = document.getElementById("shocko3");
+element1.value = "0";
+
+ }
+
+document.getElementById("F3").submit();
+ 
+}
+
+    </script>
+      
+      
+            <script>
+      
+              var i =0;
+              var i1 =0;
+              var i2 =0;
+              var i3 =0;
+              var i4 =0;
+              var i5 =0;
+              var i6 =0;
+              var i7 =0;
+              var i8 =0;
+              var i9 =0;
+              var i10 = 0;
+              var i11 = 0;
+              var i12 = 0;
+              var sound = 0;
+              function BeginL1() {
+                var x = document.getElementById("level1");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                } else {
+                  x.style.display = "none";
+                }
+      
+                var y = document.getElementById("l1B");
+                i++;
+                if(i ==2){
+                if (y.style.display === "none") {
+                  y.style.display = "block";
+                } else {
+                  y.style.display = "none";
+                }
+              }
+                var y1 = document.getElementById("l2B");
+                i1++;
+                if(i1 ==2){
+                if (y1.style.display === "none") {
+                  y1.style.display = "block";
+                } else {
+                  y1.style.display = "none";
+                }
+              }
+      
+                var y2 = document.getElementById("l3B");
+                i3++;
+                if(i3 ==2){
+                if (y2.style.display === "none") {
+                  y2.style.display = "block";
+                } else {
+                  y2.style.display = "none";
+                }
+              }
+              sound++;
+              var audio = new Audio('Stress.mp3');
+              if(sound>1){
+              audio.play();
+            }
+
+                i10++;
+               if(i10 == 2){
+    var timeleft = 15;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0){
+        clearInterval(downloadTimer);
+        document.getElementById("F3").submit();
+    }
+    },1000);
+  }
+          }
+      
+              function BeginL2() {
+                var x2 = document.getElementById("level2");
+                if (x2.style.display === "none") {
+                  x2.style.display = "block";
+                } else {
+                  x2.style.display = "none";
+                }
+                var y = document.getElementById("l1B");
+                i4++;
+                if(i4 ==2){
+                if (y.style.display === "none") {
+                  y.style.display = "block";
+                } else {
+                  y.style.display = "none";
+                }
+              }
+      
+                var y1 = document.getElementById("l2B");
+                i5++;
+                if(i5 ==2){
+                if (y1.style.display === "none") {
+                  y1.style.display = "block";
+                } else {
+                  y1.style.display = "none";
+                }
+              }
+      
+                var y2 = document.getElementById("l3B");
+                i6++;
+                if(i6 ==2){
+                if (y2.style.display === "none") {
+                  y2.style.display = "block";
+                } else {
+                  y2.style.display = "none";
+                }
+              }
+
+              sound++;
+              var audio = new Audio('Stress.mp3');
+              var caudio = new Audio('cam.mp3');
+              if(sound>1){
+              caudio.pause();
+              audio.play();
+            }
+
+            i11++;
+               if(i11 == 2){
+    var timeleft = 15;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0){
+        clearInterval(downloadTimer);
+        document.getElementById("F4").submit();
+    }
+    },1000);
+  }
+
+                       }
+            
+      
+              function BeginL3() {
+                var x3 = document.getElementById("level3");
+                if (x3.style.display === "none") {
+                  x3.style.display = "block";
+                } else {
+                  x3.style.display = "none";
+                }
+                var y = document.getElementById("l1B");
+                i7++;
+                if(i7 ==2){
+                if (y.style.display === "none") {
+                  y.style.display = "block";
+                } else {
+                  y.style.display = "none";
+                }
+              }
+      
+                var y1 = document.getElementById("l2B");
+                i8++;
+                if(i8 ==2){
+                if (y1.style.display === "none") {
+                  y1.style.display = "block";
+                } else {
+                  y1.style.display = "none";
+                }
+              }
+                var y2 = document.getElementById("l3B");
+                i9++;
+                if(i9 ==2){
+                if (y2.style.display === "none") {
+                  y2.style.display = "block";
+                } else {
+                  y2.style.display = "none";
+                }
+              }
+              sound++;
+              var audio = new Audio('Stress.mp3');
+              if(sound>1){
+              audio.play();
+            }
+
+            i12++;
+               if(i12 == 2){
+    var timeleft = 15;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0){
+        clearInterval(downloadTimer);
+        document.getElementById("F7").submit();
+    }
+    },1000);
+            }
+          }
+              </script>
+              
+      <div id="level2">
+
+        <form  id = "F4" action="https:api.particle.io/v1/devices/E00FCE688BB270717EBEEAD6/shock2?access_token=f2f1a45fdad1abe312594d11813a3a11201ac6da" method="POST"> 
+    
+        <input type="hidden" name = "shocko2" id ="shocko2" value="0" ></input>
+      
+      <div class="question1a">
+      <p name = "q1a"> 2 X 8 = 
+      <input id="answer1a" type="text" name="2shocko">
+      </p>
+        </div>
+      <br>
+
+        <div class="question2a">
+          <p name = "q2a"> -3 - -3 = 
+          <input id="answer2a" type="text" name="2shocko2">
+          </p>
+      </div>
+      <br>
+      
+          <div class="question3a">
+            <p name = "q3a"> 7 - 20 = 
+            <input id="answer3a" type="text" name="2shocko3">
+            </p>
+            </div>
+            <br>
+            <button type="submit" id="level2sub" onclick="submitForms2()"> Submit</button>
+            </div>
+            </form>
+
+            <script>
+
+              submitForms2 = function(){
+              
+              var butt4 = document.getElementById("answer1a").value;
+              
+              var butt5 = document.getElementById("answer2a").value;
+              
+              var butt6 = document.getElementById("answer3a").value;
+              
+              
+               if(butt4 == "16" && butt5 == "0" && butt6 == "-13"){
+              const element3 = document.getElementById("shocko2");
+              element3.value = "1";
+               }else{
+                const element4 = document.getElementById("shocko2");
+              element4.value = "0";
+              
+               }
+              
+              document.getElementById("F4").submit();
+               
+              }
+              
+      </script>
+      
+        </div>
+      
+        <div id="level3">
+
+          <form  id = "F7" action="https:api.particle.io/v1/devices/E00FCE688BB270717EBEEAD6/shock1?access_token=f2f1a45fdad1abe312594d11813a3a11201ac6da" method="POST"> 
+
+            <input type="hidden" name = "shocko1" id ="shocko1" value="0" ></input>
+
+          <div class="question1b">
+          <p name = "q1b"> 52 + 51 = 
+          <input id="answer1z" type="text" name="3shocko">
+          </p>
+            </div>
+          <br> 
+
+            <div class="question2b">
+              <p name = "q2b"> -3 - - - -3 = 
+              <input id="answer2z" type="text" name="3shocko2">
+              </p>
+          </div>
+          <br>
+          
+
+              <div class="question3b">
+                <p name = "q3b"> 100 - 2 + 4 = 
+                <input id="answer3z" type="text" name="3shocko3">
+                </p>
+                </div>
+                <br>
+                <button type="submit" id="level3sub" onclick="submitForms3()"> Submit</button>
+                </div>          
+            </div>
+          </form>
+            <script>
+
+              submitForms3 = function(){
+              
+              var butt7 = document.getElementById("answer1z").value;
+              
+              var butt8 = document.getElementById("answer2z").value;
+              
+              var butt9 = document.getElementById("answer3z").value;
+              
+              
+               if(butt7 == "103" && butt8 == "0" && butt9 == "102"){
+              const element5 = document.getElementById("shocko1");
+              element5.value = "1";
+               }else{
+                const element6 = document.getElementById("shocko1");
+              element6.value = "0";
+              
+               }
+              
+              document.getElementById("F7").submit();
+               
+              }
+              
+                  </script>
+      </body>
+      </html>
+
+    </body>
+</html>
